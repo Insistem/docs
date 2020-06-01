@@ -23,10 +23,12 @@ alt+command+c   Code Fences
 - JS基础
   - 设计模式看完
   - 浏览器工作原理
+  - [JS基础](https://github.com/mqyqingfeng/Blog)
 - 工程构建相关
   - webpack
 - 极客大学内容
 - 算法
+  - 数据结构与算法图解 - 入门
   - 开课吧算法视频
   - 算法（第四版）
 
