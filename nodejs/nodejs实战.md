@@ -291,6 +291,9 @@ EventEmitter
 
 ### 28|课程详情：详情需求解构
 
+- 解构
+  - 使用RPC通信从后台服务器获取数据
+
 - 模板引擎
   - include 子模板
   - xss过滤 模板helper函数
@@ -309,3 +312,102 @@ EventEmitter
 
 
 
+### 30|课程详情页：详情页需求实现
+
+- RPC的封装
+  - 通过8位的header，解决粘包问题，全双工通信的实现
+    - [粘包问题解释](https://www.nodejs.red/#/nodejs/net?id=tcp-%e7%b2%98%e5%8c%85%e9%97%ae%e9%a2%98)
+    - 如何跟后端协商的实现全双工通信？？
+
+- node包：`easy_sock` - 快速开发基于tcp连接的二进制网络协议接口的nodejs模块
+
+- node包：`proto-buffers`使用基于文件的协议
+
+- `Buffer.readUInt32LE与` [readUInt32BE](https://vimsky.com/examples/usage/node-js-buffer-readuint32le-method.html)
+
+- TODO： 这里有个BUG，只能请求一次，然后服务端报错 - 
+
+-  ```js
+  internal/buffer.js:51
+      throw new ERR_BUFFER_OUT_OF_BOUNDS();
+      ^
+  RangeError [ERR_BUFFER_OUT_OF_BOUNDS]: Attempt to write outside buffer bounds
+   ```
+
+### 31|课程播放页：需求解构
+
+- API服务 - RESTful
+  - 简单易懂
+  - 可以快速搭建
+  - 在数据的聚合方面有很大劣势
+- API服务 - GraphQL
+  - [什么是 GraphQL？](https://www.zhihu.com/question/264629587?sort=created)
+  - 专注数据聚合，前端要什么就返回什么
+
+### 32|课程播放页：实现
+
+- GraphQL
+  - Facebook开发的实现API服务的库
+  - 让前端有“自定义查询”数据的能力
+- Koa-graphql 中间件
+- TODO:自己使用这个写的例子 启动服务之后，在地址栏输入 `http://localhost:4000/?query={comment{id}}` 总是报错`{"errors":[{"message":"Expected {} to be a GraphQL schema."}]}` 不知道是为什么
+- **思考题**
+  - 自己工作中，有哪些是可以通过GraphQL来处理的场景
+  - 后端为啥是一个微服务，占用一个端口吗？
+
+### 34|课程列表页：需求解构
+
+- 后端需要渲染列表
+  - 首屏加速
+  - SEO
+- 前端也需要渲染列表
+  - 无刷新过滤、排序
+- 前后端使用一套模板渲染，开发效率高
+- 前后端同构
+  - 同一个模板/组件，可在浏览器渲染，也可在Node.js渲染
+
+### 35|课程列表页： 服务端渲染
+
+- 前后端同构
+  - ReactDOMServer.renderToString()
+  - VueServerRenderer.renderToString()
+- 使用React实现SSR（服务端渲染）
+  - 需要安装包
+    - @babel/preset-react 
+    - @babel/register
+    - react
+    - react-dom
+
+- 同构的关键
+
+  - 注意职责分离
+    - 处理数据
+    - 环境
+
+- 同构的理解
+
+  - ###### [JS核心理论之《SPA、CSR、SSR、Prerender原理浅析》](https://zhuanlan.zhihu.com/p/138356519)
+
+- 服务端渲染的技术方案
+
+  - 纯后台技术实现
+
+    - 利用后台语言模板引擎进行服务器端渲染方案落地。对于前端来说，可以利用node作为中间件，然后利用node的ejs模板引擎负责数据填充，最后通过node路由响应机制输出html字符串给客户端浏览器进行渲染；
+
+  - 构建同构应用
+
+    - 同构应用就是可以同时运行在客户端和服务器端的Web应用；这种一般采用webpack构建工具和开源工具进行实现；以下会以Vue来介绍同构应用；这种实现方式相对于上面的方案更复杂，开发难度大；但是可以享受到Vue框架带来的便利（响应式数据，路由无感切换等便利）。前提需要“客户端激活”
+
+    - > **客户端激活：官方术语，可以理解为服务器端渲染成html字符串给浏览器之后，需要引入客户端的bundleClient文件，这个环节就交给客户端处理了；**
+
+- ###### 【小项目】[Vue SSR技术方案落地实现—构建同构应用](https://juejin.im/post/5cf79cee6fb9a07eeb139725)
+
+  - 实现一个小DEMO
+  - babel的设置学习
+    - 详见 - /项目架构/工程能力.md
+
+### 36|课程列表页：需求实现
+
+
+
+ 

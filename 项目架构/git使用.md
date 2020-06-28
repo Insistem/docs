@@ -109,5 +109,7 @@
 - 如果这个本地仓库已经关联了一个远程分支为`origin`，想要再关联一个新的远程分支，这里就不能再叫 `origin`了
 - <img src="/Users/mpy/Library/Application Support/typora-user-images/image-20200525103231394.png" alt="image-20200525103231394" style="zoom:50%;" />
 
+拉取远程分支，并且在本地创建一个对应的分支
 
+`git checkout -b AP-2020.06.18-mpy --track origin/AP-2020.06.18-mpy`
 
