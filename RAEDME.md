@@ -1,3 +1,7 @@
+# 一个合格前端的自检清单
+
+https://github.com/HuYuee/blog/issues/76
+
 ## 个人技术文档沉淀
 
 快捷键
@@ -12,7 +16,7 @@ alt+command+c   Code Fences
 
 - API设计：RESTful   与 GraphQL 介绍
 
-
+## 
 
 ## 待学习内容整体规划
 
