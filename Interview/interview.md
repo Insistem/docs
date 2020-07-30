@@ -14,5 +14,11 @@ https://juejin.im/post/5e664bdd6fb9a07cd80f3192 进入大厂的面试经验（P7
 
 
 
+面试题汇总：
+
+[各种JS函数的内部实现](https://zhuanlan.zhihu.com/p/108289604)
+
+
+
 
 
