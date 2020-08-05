@@ -113,3 +113,23 @@
 
 `git checkout -b AP-2020.06.18-mpy --track origin/AP-2020.06.18-mpy`
 
+
+
+#### 记Git报错-refusing to merge unrelated histories
+
+产生问题背景： 本地新建了一个文件夹，远程新建了一个仓库，现在需要把这两个仓库建立联系
+
+参考文章： https://blog.csdn.net/u012145252/article/details/80628451
+
+```js
+git remote add origin https://github.com/Insistem/learn-day
+
+git remote -v // 查看远程仓库
+
+git pull origin master --allow-unrelated-histories  // 发现可以在pull命令后紧接着使用--allow-unrelated-history选项来解决问题（该选项可以合并两个独立启动仓库的历史）
+
+git push --set-upstream origin master 等同于简写的 git push -u origin master
+```
+
+
+
