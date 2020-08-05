@@ -1,4 +1,4 @@
-# echarts图表配置问题大全
+# echarts使用经验总结大全
 
 #### y轴数值过大被遮挡问题
 
@@ -79,3 +79,30 @@ tooltip: {
 http://ciika.com/2019/04/echat-watermark/
 
 <img src="/Users/mpy/Library/Application Support/typora-user-images/image-20200714102723854.png" alt="image-20200714102723854" style="zoom:50%;" />
+
+#### echarts的销毁
+
+- echarts.dispose(), 销毁实例，实例销毁后无法再被使用, 构造函数的方法
+
+- echartsInstance.clear()清空当前实例，会移除实例中所有的组件和图表, 实例的方法。
+
+#### 使用echarts导致的内存波动解决方案
+
+https://juejin.im/post/6844904180914585613
+
+https://www.jianshu.com/p/8cbb05c1ec2f
+
+切换路由时，组件被销毁，但在销毁组件的时候并没有销毁echarts实例。
+
+所以将echarts实例创建，写成mixins，就不用每次都记着手动dispose了
+
+```js
+beforeDestory(){
+  echarts.dispose(this.chart);
+  this.chart = null;
+}
+```
+
+#### 如何在项目中更优雅的使用echarts总结
+
+https://segmentfault.com/a/1190000011230007
