@@ -102,10 +102,27 @@ promise解决的是异步编码风格的问题。
 API：
 
 - `Promise.prototype.then()`
+
 - `Promise.prototype.catch()`
+
 - `Promise.all()`
+
 - `Promise.race()`
+
 - `Promise.resolve()`
+
+  - ```js
+    // 写法1
+    let p = new Promise((resolve, reject) => {
+      console.log("log: 外部promise");
+      resolve('foo');
+    })
+    // 写法2
+    let p = Promise.resolve('foo')
+    // 解释
+    // 写法1等同于写法2，都是直接返回一个resolved状态的 Promise 对象
+    ```
+
 - `Promise.reject()`
 
 ### 各种不同的实现
