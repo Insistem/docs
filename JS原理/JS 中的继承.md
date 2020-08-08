@@ -4,3 +4,11 @@
 
 各种继承方式
 
+#### 几个常见的方法
+
+Object.create()
+
+Object.setPrototypeof()
+
+Object.getPrototypeof()
+
