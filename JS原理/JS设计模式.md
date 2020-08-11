@@ -152,6 +152,14 @@ SubClass.prototype.getSuperValue = SuperClass.prototype.getSuperValue
 
 
 
+#### [策略模式在表单校验中的应用](http://hcysun.me/2016/02/21/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E5%9C%A8%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/) 
+
+
+
+
+
+
+
 
 
 
