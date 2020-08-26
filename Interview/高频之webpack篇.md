@@ -14,3 +14,11 @@ import {up} from 'lodash/up'
 import {up} from 'lodash'
 ```
 
+
+
+### tree shaking 
+
+参考：https://juejin.im/post/6844903544756109319
+
+实践： https://juejin.im/post/6844903544760336398
+

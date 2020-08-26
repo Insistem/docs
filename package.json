@@ -1,0 +1,23 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "这里整理了所有已经学到的以及待学习的知识点，慢慢积累，总有一天会聚沙成塔！",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Insistem/docs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Insistem/docs/issues"
+  },
+  "homepage": "https://github.com/Insistem/docs#readme",
+  "devDependencies": {
+    "vuepress": "^1.5.4"
+  }
+}
