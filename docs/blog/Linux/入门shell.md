@@ -55,6 +55,10 @@ mac中使用tree命令 - 是否可以尝试自己写一个tree命令
 - https://blog.csdn.net/alicelmx/article/details/81188389
 
   `brew install tree`
+  
+- ![image-20200630123434777](/Users/mpy/Train-myself/docs/docs/blog/Linux/image-20200630123434777.png)
+
+host文件修改： shift+command+G 然后输入 /etc/hosts 可以看到host文件
 
 
 
